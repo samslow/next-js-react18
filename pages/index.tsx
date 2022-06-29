@@ -5,9 +5,11 @@ import styles from "../styles/Home.module.css";
 import dynamic from "next/dynamic";
 
 const List = dynamic(() => import("../src/components/List"), {
-  loading: () => <div>...loading</div>,
+  // loading: () => <div>...loading</div>,
   ssr: false,
+  suspense: true,
 });
+// import List from "../src/components/List";
 
 const Home = () => {
   return (
